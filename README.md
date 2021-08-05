@@ -1,1 +1,2 @@
-# snake-game
+# Snake Game
+### Run using `python main.py`
