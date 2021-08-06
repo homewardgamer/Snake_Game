@@ -4,7 +4,6 @@ from food import Food
 from scoreboard import ScoreBoard
 import time
 
-
 screen = Screen()
 screen.setup(height=600, width=600)
 screen.bgcolor("black")
@@ -39,13 +38,15 @@ while gameIsOn:
        snake.extend()
     for segment in snake.segments[1:]:
         if snake.segments[0].distance(segment)<15:
-            gameIsOn=False
-            score.gameOver()
+            gameIsOn= True
+            score.reset()
+            snake.reset()
 
 
     if snake.segments[0].xcor() > 290 or snake.segments[0].xcor() < -290 or snake.segments[0].ycor() < -290 or  snake.segments[0].ycor() > 290:
-        gameIsOn= False
-        score.gameOver()
+        gameIsOn= True
+        score.reset()
+        snake.reset()
 
 
 screen.exitonclick()
