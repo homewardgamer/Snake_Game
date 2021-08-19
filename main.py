@@ -4,6 +4,8 @@ from food import Food
 from scoreboard import ScoreBoard
 import time
 
+
+
 screen = Screen()
 screen.setup(height=600, width=600)
 screen.bgcolor("black")
@@ -48,5 +50,7 @@ while gameIsOn:
         score.reset()
         snake.reset()
 
+        
 
 screen.exitonclick()
+
