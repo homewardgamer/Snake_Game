@@ -4,8 +4,6 @@ from food import Food
 from scoreboard import ScoreBoard
 import time
 
-
-
 screen = Screen()
 screen.setup(height=600, width=600)
 screen.bgcolor("black")
@@ -14,7 +12,6 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 score = ScoreBoard()
-
 
 screen.listen()
 screen.onkey(snake.up,"Up")
